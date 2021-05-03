@@ -22,6 +22,7 @@ public class HydroSoft {
                 Logger.getLogger(HydroSoft.class.getName()).log(Level.SEVERE, null, ex);
             }
              System.out.println(dht11.getTemperatura(7));
+             //
         }
     
     }
