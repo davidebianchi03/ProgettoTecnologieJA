@@ -1,8 +1,11 @@
 package hydrosoft;
 
 import com.pi4j.io.gpio.GpioFactory;
+import com.pi4j.io.gpio.Pin;
 import com.pi4j.io.gpio.RaspiGpioProvider;
+import com.pi4j.io.gpio.RaspiPin;
 import com.pi4j.io.gpio.RaspiPinNumberingScheme;
+import com.pi4j.util.CommandArgumentParser;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,7 +14,7 @@ public class HydroSoft {
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(System.getProperty("os.name")); //test per vedere se il progetto è stato configurato correttamente per essere eseguito su rasperry/controllo che il programma venga eseguito su rasperry
         //GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
-
+/*
         CLeggiDHT11 dht11 = new CLeggiDHT11();
 
         
@@ -24,8 +27,13 @@ public class HydroSoft {
              System.out.println(dht11.getTemperatura(7));
              
              
-        }
+        }*/
+
+        CApriChiudiSerra.apriSerra();
+        Thread.sleep(5000);
+        CApriChiudiSerra.chiudiSerra();
+        
     
     }
-    
+
 }
