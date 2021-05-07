@@ -38,6 +38,20 @@ public class HydroSoft {
         }
    
          CApriChiudiSerra.chiudiSerra();*/
+        /*
+        int tempAria = 0, umidAria = 0;
+        boolean bagnato = false, aperto = false;
+        String server = "", user = "", password = "";
+        //Creazione file JSON
+        CreateJSONFile json = new CreateJSONFile(tempAria, umidAria, aperto, bagnato);
+        json.createJSON();
+        json.createFile();
+        //Caricamento file su server
+        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
+        String file = json.getNomeFile();
+        connessione.caricaFile(file);
+        */
+
     }
     
 }
