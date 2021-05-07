@@ -1,0 +1,5 @@
+REQUISITI Hydrosoft
+MUST L'utente deve poter visualizzare i dati riguardanti alla serra da remoto; inoltre la serra deve bagnare la pianta quando la terra è asciutta
+e aprire il tetto della serra quando fa troppo caldo
+SHOULD L'utente dovrebbe poter visualizzare i dati tramite un'applicazione presente sul proprio smartphone
+MAY L'utente può vedere in tempo reale le condizioni della pianta

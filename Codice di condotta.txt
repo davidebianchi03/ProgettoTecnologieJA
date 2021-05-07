@@ -1,0 +1,28 @@
+CODICE DI CONDOTTA Hydrosoft
+-Ruoli
+	Bianchi Davide = Capogruppo/Sviluppatore
+	De Maria Mattia = Mediatore/Sviluppatore
+	Paci Emanuele = Vice/Sviluppatore
+	Russo Edoardo = Motivatore/Sviluppatore
+		
+- Regole
+		1)Rispetto delle scadenze e degli impegni presi
+		2)Rispettare gli altri
+		3)Ascoltare le idee degli altri (anche quelle che possono sembrare non fattibili)
+		4)Ognuno deve dare il proprio contributo
+		5)Se qualcosa sta andando male cerca di risollevare la situazione
+
+- Riunioni
+	Le riunioni si svolgono con cadenza settimanale, per le ragioni dovute alla situazione attuale online
+
+- Strumenti di comunicazione
+	- Discord (per parlare e fare riunioni)
+	- Whatsapp (per la comunicazione tramite messaggi)
+	- Trello (per le scadenze e gli obiettivi)
+	- Github (per condividere il codice)
+
+- Come vengono prese le decisioni
+	Per prendere le decisioni all'interno del nostro gruppo si vota per alzata di mano, nel caso di riuniioni
+	a distanza ognuno esprime la propria preferenza a voce
+
+		
