@@ -14,7 +14,7 @@ public class HydroSoft {
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(System.getProperty("os.name")); //test per vedere se il progetto è stato configurato correttamente per essere eseguito su rasperry/controllo che il programma venga eseguito su rasperry
         //GpioFactory.setDefaultProvider(new RaspiGpioProvider(RaspiPinNumberingScheme.BROADCOM_PIN_NUMBERING));
-
+/*
         CLeggiDHT11 dht11 = new CLeggiDHT11();
 
         
@@ -27,15 +27,11 @@ public class HydroSoft {
              System.out.println(dht11.getTemperatura(7));
              
              
-        }
-/*
+        }*/
+
         CApriChiudiSerra.apriSerra();
         Thread.sleep(5000);
-<<<<<<< .merge_file_a14516
-        CApriChiudiSerra.chiudiSerra();*/
-=======
         CApriChiudiSerra.chiudiSerra();
->>>>>>> .merge_file_a17796
 
 //        //Creazione file JSON con dati raccolti
 //        int temp = 0, umid = 0;

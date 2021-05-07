@@ -31,11 +31,7 @@ public class HydroSoft {
 /*
         CApriChiudiSerra.apriSerra();
         Thread.sleep(5000);
-<<<<<<< .merge_file_a14516
         CApriChiudiSerra.chiudiSerra();*/
-=======
-        CApriChiudiSerra.chiudiSerra();
->>>>>>> .merge_file_a17796
 
 //        //Creazione file JSON con dati raccolti
 //        int temp = 0, umid = 0;
