@@ -32,8 +32,21 @@ public class HydroSoft {
         CApriChiudiSerra.apriSerra();
         Thread.sleep(5000);
         CApriChiudiSerra.chiudiSerra();
-        
-    
+
+//        //Creazione file JSON con dati raccolti
+//        int temp = 0, umid = 0;
+//        boolean aperto = false, bagnato = false;
+//        CreateJSONFile json = new CreateJSONFile(temp, umid, aperto, bagnato);
+//        json.createJSON();
+//        json.createFile();
+//        //Invio del file con i dati a server altervista
+//        String server = "";
+//        String user = "";
+//        String password = "";
+//        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
+//        String file = json.getNomeFile();
+//        connessione.caricaFile(file);
+
     }
 
 }
