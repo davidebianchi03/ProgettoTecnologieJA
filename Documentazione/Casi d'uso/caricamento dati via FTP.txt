@@ -1,6 +1,6 @@
-	Nome: Creazione file JSON e caricamento su server FTP
-	Attori: Serra
-	Sequenza di eventi:
+Nome: Creazione file JSON e caricamento su server FTP
+Attori: Serra
+Sequenza di eventi:
     1. Viene creato/sovrascritto un file JSON.
     2. Vengono inseriti i dati raccolti dai sensori in un vettore di elementi.
     3. Viene salvato il file in locale.
