@@ -32,8 +32,8 @@ public class CJSONFile {
             for (int i = 0; i < listaDati.getNumEl(); i++) {
                 ObjectNode tempDati = mapper.createObjectNode();
                 tempDati.put("oraRilevazione", listaDati.getDati(i).getOraRilevazione());
-                tempDati.put("tempAria", listaDati.getDati(i).getTemperaturaAria());
-                tempDati.put("umidAria", listaDati.getDati(i).getUmiditaAria());
+                tempDati.put("temperaturaAria", listaDati.getDati(i).getTemperaturaAria());
+                tempDati.put("umiditaAria", listaDati.getDati(i).getUmiditaAria());
                 tempDati.put("bagnato", listaDati.getDati(i).isBagnato());
                 tempDati.put("aperto", listaDati.getDati(i).isAperto());
 
@@ -58,9 +58,6 @@ public class CJSONFile {
     }
 
     public void readFile() {
-        /*
-            TODO: Inserire verifica esistenza del file prima di leggerlo 
-        */
         ObjectMapper mapper = new ObjectMapper();
     }
     
