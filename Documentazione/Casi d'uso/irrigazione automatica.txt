@@ -1,0 +1,7 @@
+Attore: Serra
+Eventi:
+      1)Controlla se la terra è umida tramite il sensore di umidità del terreno
+      2.1)Se la terra è umida non fa niente
+      2.2)Se la terra è asciutta la serra aspetta 2 minuti e controlla se nuovamente lo è.
+      3.1)Se la terra è nuovamente asciutta la irriga
+      3.2)Se la terra non lo è non fa niente

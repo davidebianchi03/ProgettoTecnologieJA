@@ -1,0 +1,9 @@
+Nome: Creazione file JSON e caricamento su server FTP
+Attori: Serra
+Sequenza di eventi:
+    1. Viene creato/sovrascritto un file JSON.
+    2. Vengono inseriti i dati raccolti dai sensori in un vettore di elementi.
+    3. Viene salvato il file in locale.
+    4. Si avvia la connessione FTP con il server "Altervista" con i dati necessari.
+    5. Viene caricato/sovrascritto il file creato precedentemente sul server.
+    6. Si chiude la connessione con il server.

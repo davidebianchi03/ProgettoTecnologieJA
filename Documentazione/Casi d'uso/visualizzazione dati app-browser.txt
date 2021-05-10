@@ -1,0 +1,6 @@
+Attore:utente
+Eventi:
+        1.Controllare i dati della serra in tempo reale 
+        2.Controllare tramite grafico l' andamento della serra
+        3.Se è presente un eventuale problema, risolverlo una volta toranto a casa dove possiede la serra e rimuovere il problema
+        

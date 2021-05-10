@@ -1,0 +1,7 @@
+Attore:Serra
+Eventi:
+1)Controlla la temperatura della serra tramite l'apposito sensore
+2.1)Se la temperatura è sopra una determinata soglia la serra si apre(tramite l'utilizzo di un servomotore) permettendo alla pianta
+di ricevere maggior ricircolo d'aria.
+2.2)Se la temperatura è sotto una determinata soglia la serra rimane chiusa.
+3)La serra regola in modo automatico il ricircolo d'aria adatto alla pianta
