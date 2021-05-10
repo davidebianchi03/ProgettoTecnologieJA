@@ -12,7 +12,7 @@ public class HydroSoft {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {/*
+    public static void main(String[] args) {
         CLeggiDHT11 dht11 = new CLeggiDHT11();
 
         
@@ -30,7 +30,7 @@ public class HydroSoft {
         }
          
          CApriChiudiSerra.apriSerra();
- 
+ /*
         try {
             Thread.sleep(5000);
         } catch (InterruptedException ex) {
