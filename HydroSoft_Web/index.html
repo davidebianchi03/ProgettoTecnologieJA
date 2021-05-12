@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HydroSoft</title>
+        <script src="Operazioni.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            .Paragrafi{
+            font-size: 20px;
+            font-family:Verdana,Tahoma, sans-serif;
+            font-style: italic;
+            color:black;
+            text-align: center;
+            }
+            .Scelta{
+            font-size: 20px;
+            font-family: Verdana,Tahoma, sans-serif;
+            font-style: italic;
+            color:black;
+            text-align:right ;
+            }
+            body {           
+            background: url('Sfondo.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover;
+
+            }
+            </style>
+    </head>
+    <body>
+        <form>
+            <div class="Scelta">
+                <select  name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">          
+                <option value="index.html">Serra e dati correlati</option>//http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
+                <option value="Grafico.html">Grafico e andamenti</option>
+                </select>
+            </div>
+            <div class="Paragrafi">
+                <p>Benvenuti su HydroSoft.<br>
+                    Prima di utilizzare la serra occore impostarla,selezionare quindi il tipo di pianta che desiderate inserire all'interno della serra.</p>
+            
+                <select name="TipologiaPianta" id="SceltaPianta">
+                    <option value="PiantaGrassa">Pianta Grassa</option>
+                    <option value="PiantaErbacea">Pianta Erbacea</option>
+                 <option value="PiantaDaOrto">Pianta Da Orto</option>
+                </select>
+            </div>
+           <p class="Paragrafi"><label for="Temperatura">Temperatura:</label><input type="text"  id="Temperatura"></p>
+
+           <p class="Paragrafi"><label for="Umidità">Umidità:</label><input type="text"  id="Umidità"></p>
+
+           <p class="Paragrafi"><label for="StatoTerreno">Stato Terreno:</label><input type="text"  id="StatoTerreno"></p>
+
+           <p class="Paragrafi"><label for="StatoSerra">Stato Serra:</label><input type="text"  id="StatoSerra"></p>
+
+           <div class="Paragrafi">
+                <input type="button" id="BtnAggiorna" onclick="PrendiEdElaboraDati()" value="Aggiorna">
+           </div>
+          
+        </form>
+        
+    </body>
+
+</html>

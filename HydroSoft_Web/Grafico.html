@@ -7,14 +7,14 @@
         <style type="text/css">
             .Paragrafi{
             font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
+            font-family:Verdana,Tahoma, sans-serif;
             font-style: italic;
             color:black;
             text-align: center;
             }
             .Scelta{
             font-size: 20px;
-            font-family: 'Times New Roman', Times, serif;
+            font-family:Verdana,Tahoma, sans-serif;
             font-style: italic;
             color:black;
             text-align:right ;
@@ -31,10 +31,17 @@
             </style>
     </head>
     <body>
-            <select name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">          
-                <option value="Grafico.html">Grafico e andamenti</option>
-                <option value="Homepage.html">Serra e dati correlati</option>
-            </select>
+        <form>
+            <div class="Scelta">
+                <select  name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">          
+                   
+                    <option value="Grafico.html">Grafico e andamenti</option>
+                    <option value="index.html">Serra e dati correlati</option>http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
+                </select>
+        </div>
+         
+        </form>
+          
     </body>
 
 </html>
