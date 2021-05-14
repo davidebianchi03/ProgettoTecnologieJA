@@ -1,0 +1,11 @@
+Personas
+Cliente tipo 1 -> Persona che viaggia molto
+	Il nostro prodotto è adatto per tutti coloro che viaggiano molto o che sono lontani da casa per molto 
+	tempo perchè permette di tenere sotto controllo e irrigare in maniera automatica le proprie piante da 
+	appartamento.
+
+Cliente tipo 2 -> Persona che non ha tempo di prendersi cura delle piante/Non ha il pollice verde
+	Il nostro prodotto è adatto per tutti coloro che non hanno tempo di prendersi cura delle piante o, che 
+	comunque, non hanno il pollice verde. Si adatta a costoro perchè il nostro prodotto non richiede nessuna
+	azione dell'utente che deve soltanto riempire nuovamente il contenitore dell'acqua quando si vuota.
+
