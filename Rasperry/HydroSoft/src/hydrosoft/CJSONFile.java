@@ -9,6 +9,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -92,26 +94,86 @@ public class CJSONFile {
         }
     }
 
-    public void readFile() {
+    public void readFile(CListaDati listaDati) {
         Scanner reader;
-        String singRilLetta = "";
-        String listRilLetta = "";
+        String lettaSingola = "";
+        String lettaLista = "";
         try {
             File fsr = new File(nomeFileSingolaRilevazione);
             reader = new Scanner(fsr);
             while (reader.hasNextLine()) {
-                singRilLetta = reader.nextLine();
-                System.out.println(singRilLetta);
+                lettaSingola += reader.nextLine();
             }
             File flr = new File(nomeFileListaRilevazioni);
             reader = new Scanner(flr);
             while (reader.hasNextLine()) {
-                listRilLetta = reader.nextLine();
-                System.out.println(listRilLetta);
+                lettaLista += reader.nextLine();
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
         }
+        //System.out.println(lettaSingola);
+        System.out.println(lettaLista);
+
+        //Devo trasformare la string in una CListaDati
+        listaDati.clearList();
+        CDati temp = new CDati();
+        int startElem = 0;
+        String elem;
+
+        do {
+            //POSIZIONI GRAFFE
+            int posGraffaAperta = lettaLista.indexOf('{', startElem);
+            int posGraffaChiusa = lettaLista.indexOf('}', posGraffaAperta);
+            
+            System.out.println(startElem);
+            System.out.println(posGraffaAperta);
+            System.out.println(posGraffaChiusa);
+            //SINGOLO ELEMENTO
+            elem = lettaLista.substring(posGraffaAperta, posGraffaChiusa + 1);
+            //POSIZIONI SEPARATORI
+            int posPnti = elem.indexOf(':', posGraffaAperta);
+            int posVirg = elem.indexOf(',', posPnti);
+            //ORA RILEVAZIONE
+            String dato = elem.substring(posPnti + 3, posVirg - 1);
+            temp.setOraRilevazione(dato);
+
+            //TIPO PIANTA
+            posPnti = elem.indexOf(':', posVirg);
+            posVirg = elem.indexOf(',', posPnti);
+            dato = elem.substring(posPnti + 3, posVirg - 1);
+            temp.setTipoPianta(dato);
+
+            //TEMPERATURA ARIA
+            posPnti = elem.indexOf(':', posVirg);
+            posVirg = elem.indexOf(',', posPnti);
+            dato = elem.substring(posPnti + 2, posVirg);
+            temp.setTemperaturaAria(Float.parseFloat(dato));
+
+            //UMIDITA ARIA
+            posPnti = elem.indexOf(':', posVirg);
+            posVirg = elem.indexOf(',', posPnti);
+            dato = elem.substring(posPnti + 2, posVirg);
+            temp.setUmiditaAria(Float.parseFloat(dato));
+
+            //BAGNATO
+            posPnti = elem.indexOf(':', posVirg);
+            posVirg = elem.indexOf(',', posPnti);
+            dato = elem.substring(posPnti + 2, posVirg);
+            temp.setBagnato(Boolean.parseBoolean(dato));
+
+            //APERTO
+            posPnti = elem.indexOf(':', posVirg);
+            dato = elem.substring(posPnti + 2, posGraffaChiusa - 2);
+            temp.setAperto(Boolean.parseBoolean(dato));
+            listaDati.addDati(temp);
+            
+            startElem = posGraffaChiusa;
+            System.out.println(listaDati.getDati(0));
+        }  while (startElem < (lettaLista.length() - elem.length()));
+        
+       
+            
     }
 
     public String getNomeFile() {

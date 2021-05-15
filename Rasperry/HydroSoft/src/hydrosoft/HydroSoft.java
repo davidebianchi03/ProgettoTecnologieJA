@@ -40,18 +40,24 @@ public class HydroSoft {
         }
    
          CApriChiudiSerra.chiudiSerra();*/
- /*
+
         CJSONFile json = new CJSONFile();
-        json.readFile();
-        json.createJSONObject(new CDati("pianta1", 21, 50, false, true)); //da togliere il new CDati per test
-        //json.createJSONArray(new CListaDati()); -> Aspetta ad usare devo risolvere cose :D (paci)
-        //json.createFile(); -> Da un errore devo risolvere
+        CListaDati listaDati = new CListaDati();
+        //CListaDati rilevazioni = new CListaDati();
+//        rilevazioni.addDati(new CDati("pianta1", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta2", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta3", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta4", 21, 50, false, true));
+        json.readFile(listaDati);
+        //json.createJSONObject(new CDati("pianta1", 21, 50, false, true)); //da togliere il new CDati per test
+        //json.createJSONArray(rilevazioni); //-> Aspetta ad usare devo risolvere cose :D (paci)
+        //json.createFile(); //-> Da un errore devo risolvere
         //Caricamento file su server
-        String server = "", user = "", password = "";
-        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
-        String file = json.getNomeFile();
-        connessione.caricaFile(file);
-*/
+//        String server = "", user = "", password = "";
+//        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
+//        String file = json.getNomeFile();
+//        connessione.caricaFile(file);
+
     }
 
 }
