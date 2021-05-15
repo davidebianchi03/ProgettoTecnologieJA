@@ -5,9 +5,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,25 +29,17 @@ public class CJSONFile {
     Restituisco json come stringa
      */
     private ObjectMapper mapper;
-    private String json;
-    private String nomeFile;
+    private String jsonSingolo;
+    private String jsonLista;
+    private String nomeFileSingolaRilevazione;
+    private String nomeFileListaRilevazioni;
 
     public CJSONFile() {
         this.mapper = new ObjectMapper();
-        this.nomeFile = "rilevazioniSerra.json";
-        this.json = "";
-
-        //Crea il file, se esite già non lo sovrascrive -> nel caso della lettura per non fare il controllo se esite il file
-        try {
-
-            File f = new File(nomeFile);
-            if (f.createNewFile()) {
-                System.out.println("file creato");
-            }
-
-        } catch (IOException ex) {
-            Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        this.nomeFileSingolaRilevazione = "rilevazioniSerraSingola.json";
+        this.nomeFileListaRilevazioni = "rilevazioniSerraLista.json";
+        this.jsonSingolo = "";
+        this.jsonLista = "";
     }
 
     private ObjectNode createObjectNode(CDati dati) {
@@ -63,8 +57,8 @@ public class CJSONFile {
     public void createJSONObject(CDati dati) {
         try {
             ObjectNode on = createObjectNode(dati);
-            json = "";
-            json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(on);
+            jsonSingolo = "";
+            jsonSingolo = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(on);
         } catch (JsonProcessingException ex) {
             Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -77,8 +71,8 @@ public class CJSONFile {
                 ObjectNode on = createObjectNode(listaDati.getDati(i));
                 arrayNode.add(on);
             }
-            json = "";
-            json = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(arrayNode);
+            jsonLista = "";
+            jsonLista = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(arrayNode);
         } catch (JsonProcessingException ex) {
             Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -86,23 +80,49 @@ public class CJSONFile {
 
     public void createFile() {
         try {
-            FileWriter scrivi = new FileWriter(nomeFile);
-            scrivi.write(json);
-            scrivi.close();
-            System.out.println("File completato.");
+            FileWriter scriviRS = new FileWriter(nomeFileSingolaRilevazione);
+            scriviRS.write(jsonSingolo);
+            scriviRS.close();
+            FileWriter scriviRL = new FileWriter(nomeFileListaRilevazioni);
+            scriviRL.write(jsonLista);
+            scriviRL.close();
+            //System.out.println("File completato.");
         } catch (IOException ex) {
             Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     public void readFile() {
+        Scanner reader;
+        String singRilLetta = "";
+        String listRilLetta = "";
+        try {
+            File fsr = new File(nomeFileSingolaRilevazione);
+            reader = new Scanner(fsr);
+            while (reader.hasNextLine()) {
+                singRilLetta = reader.nextLine();
+                System.out.println(singRilLetta);
+            }
+            File flr = new File(nomeFileListaRilevazioni);
+            reader = new Scanner(flr);
+            while (reader.hasNextLine()) {
+                listRilLetta = reader.nextLine();
+                System.out.println(listRilLetta);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(CJSONFile.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public String getNomeFile() {
-        return nomeFile;
+        return nomeFileSingolaRilevazione;
     }
 
-    public String getJsonAsString() {
-        return json;
+    public String getJsonObjectAsString() {
+        return jsonSingolo;
+    }
+
+    public String getJsonArrayAsString() {
+        return jsonLista;
     }
 }

@@ -1,0 +1,25 @@
+[{
+  "oraRilevazione" : "2021-05-15 17:08:01",
+  "tipoPianta" : "pianta1",
+  "temperaturaAria" : 21.0,
+  "umiditaAria" : 50.0,
+  "bagnato" : true,
+  "aperto" : false
+},
+{
+  "oraRilevazione" : "2021-05-15 17:18:01",
+  "tipoPianta" : "pianta1",
+  "temperaturaAria" : 21.0,
+  "umiditaAria" : 50.0,
+  "bagnato" : true,
+  "aperto" : false
+},
+{
+  "oraRilevazione" : "2021-05-15 17:28:01",
+  "tipoPianta" : "pianta1",
+  "temperaturaAria" : 21.0,
+  "umiditaAria" : 50.0,
+  "bagnato" : true,
+  "aperto" : false
+}
+]
