@@ -13,12 +13,45 @@ public class CDati {
     private boolean aperto; //true = aperto, false = chiuso
     private boolean bagnato; // true = bagnato, false = asciutto;
 
+    public CDati() {
+        this.oraRilevazione = "";
+        this.tipoPianta = "";
+        this.temperaturaAria = 0.0f;
+        this.umiditaAria = 0.0f;
+        this.aperto = false;
+        this.bagnato = false;
+    }
+    
     public CDati(String tipoPianta, int temperaturaAria, int umiditaAria, boolean aperto, boolean bagnato) {
         this.oraRilevazione = CFormatOra.getOra();
         this.tipoPianta = tipoPianta;
         this.temperaturaAria = temperaturaAria;
         this.umiditaAria = umiditaAria;
         this.aperto = aperto;
+        this.bagnato = bagnato;
+    }
+
+    public void setOraRilevazione(String oraRilevazione) {
+        this.oraRilevazione = oraRilevazione;
+    }
+
+    public void setTipoPianta(String tipoPianta) {
+        this.tipoPianta = tipoPianta;
+    }
+
+    public void setTemperaturaAria(float temperaturaAria) {
+        this.temperaturaAria = temperaturaAria;
+    }
+
+    public void setUmiditaAria(float umiditaAria) {
+        this.umiditaAria = umiditaAria;
+    }
+
+    public void setAperto(boolean aperto) {
+        this.aperto = aperto;
+    }
+
+    public void setBagnato(boolean bagnato) {
         this.bagnato = bagnato;
     }
 
