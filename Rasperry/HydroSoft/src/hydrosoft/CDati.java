@@ -101,7 +101,7 @@ public class CDati {
 
     @Override
     public String toString() {
-        String temp = temperaturaAria + " " + umiditaAria + " " + aperto + " " + bagnato + " " + oraRilevazione;
+        String temp = oraRilevazione + " " + tipoPianta + " " +temperaturaAria + " " + umiditaAria + " " +  bagnato + " " + aperto;
         return temp;
     }
 }
