@@ -12,7 +12,7 @@ public class CFormatOra {
         LocalDate data = LocalDate.now();
         LocalTime tempo = LocalTime.now();
         String time = tempo.toString().substring(0, 8);
-        String dataOra = data.toString() + " " + time;
+        String dataOra = data.toString() + "_" + time;
         //System.out.println(dataOra);
         return dataOra;
     } 

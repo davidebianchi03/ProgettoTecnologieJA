@@ -1,26 +1,26 @@
 [ {
-  "oraRilevazione" : "2021-05-15 20:03:39",
+  "oraRilevazione" : "2021-05-15_20:03:39",
   "tipoPianta" : "pianta1",
   "temperaturaAria" : 21.0,
   "umiditaAria" : 50.0,
   "bagnato" : true,
   "aperto" : false
 }, {
-  "oraRilevazione" : "2021-05-15 20:03:39",
+  "oraRilevazione" : "2021-05-15_20:03:39",
   "tipoPianta" : "pianta2",
   "temperaturaAria" : 21.0,
   "umiditaAria" : 50.0,
   "bagnato" : true,
   "aperto" : false
 }, {
-  "oraRilevazione" : "2021-05-15 20:03:39",
+  "oraRilevazione" : "2021-05-15_20:03:39",
   "tipoPianta" : "pianta3",
   "temperaturaAria" : 21.0,
   "umiditaAria" : 50.0,
   "bagnato" : true,
   "aperto" : false
 }, {
-  "oraRilevazione" : "2021-05-15 20:03:39",
+  "oraRilevazione" : "2021-05-15_20:03:39",
   "tipoPianta" : "pianta4",
   "temperaturaAria" : 21.0,
   "umiditaAria" : 50.0,
