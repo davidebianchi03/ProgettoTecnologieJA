@@ -53,16 +53,16 @@ public class ConnessioneFTP {
             client.login(user, password);
             client.enterLocalPassiveMode();
             client.setFileType(FTP.BINARY_FILE_TYPE);
-            System.out.println("Connessione avviata a: " + server + "  : " + port);
+            //System.out.println("Connessione avviata a: " + server + "  : " + port);
             
             File file = new File(filePath);
             String nomeFile = file.getName();
             InputStream inputStream = new FileInputStream(file);
-            System.out.println("Caricamento del file");
+            //System.out.println("Caricamento del file");
             boolean done = client.storeFile(nomeFile, inputStream);
             inputStream.close();
             if (done) {
-                System.out.println("File caricato.");
+                //System.out.println("File caricato.");
             }
         } catch (IOException ex) {
             System.out.println("Error: " + ex.getMessage());

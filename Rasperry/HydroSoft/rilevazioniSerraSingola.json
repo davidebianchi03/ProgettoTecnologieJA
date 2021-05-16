@@ -1,0 +1,8 @@
+{
+  "oraRilevazione" : "",
+  "tipoPianta" : "",
+  "temperaturaAria" : 0.0,
+  "umiditaAria" : 0.0,
+  "bagnato" : false,
+  "aperto" : false
+}

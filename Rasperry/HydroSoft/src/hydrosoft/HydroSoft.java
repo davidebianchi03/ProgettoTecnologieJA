@@ -42,22 +42,22 @@ public class HydroSoft {
          CApriChiudiSerra.chiudiSerra();*/
 
         CJSONFile json = new CJSONFile();
-        CListaDati listaDati = new CListaDati();
-        //CListaDati rilevazioni = new CListaDati();
-//        rilevazioni.addDati(new CDati("pianta1", 21, 50, false, true));
-//        rilevazioni.addDati(new CDati("pianta2", 21, 50, false, true));
-//        rilevazioni.addDati(new CDati("pianta3", 21, 50, false, true));
-//        rilevazioni.addDati(new CDati("pianta4", 21, 50, false, true));
-        json.readFile(listaDati);
-        //json.createJSONObject(new CDati("pianta1", 21, 50, false, true)); //da togliere il new CDati per test
-        //json.createJSONArray(rilevazioni); //-> Aspetta ad usare devo risolvere cose :D (paci)
-        //json.createFile(); //-> Da un errore devo risolvere
-        //Caricamento file su server
-//        String server = "", user = "", password = "";
-//        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
-//        String file = json.getNomeFile();
-//        connessione.caricaFile(file);
-
+        //LEGGO IL FILE
+        json.readFile();
+        
+        //PROCEDURA CREAZIONE FILE
+        //SOVRASCRIVERE DATI PER FILE SINGOLO
+        json.createJSONObject(new CDati()); //da togliere il new CDati
+        //APPEND ALLA LISTA
+        json.appendJSONOject(new CDati());
+        //CREAZIONE FILE
+        json.createFile();
+        //CARICAMENTO SU SERVER
+        String server = "", user = "", password = "";
+        ConnessioneFTP connessione = new ConnessioneFTP("paciemanuele.altervista.org", "paciemanuele", "4sg9rA8JpRBZ");
+        String file = json.getNomeFileSR();
+        connessione.caricaFile(file);
+        file = json.getNomeFileLR();
+        connessione.caricaFile(file);
     }
-
 }
