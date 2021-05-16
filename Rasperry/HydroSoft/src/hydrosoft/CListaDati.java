@@ -21,4 +21,7 @@ public class CListaDati {
     public CDati getDati(int index){
         return lista.get(index);
     }
+    public void clearList(){
+        lista.clear();
+    }
 }

@@ -13,6 +13,7 @@ public class HydroSoft {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        /*
         CLeggiDHT11 dht11 = new CLeggiDHT11();
 
         
@@ -30,6 +31,7 @@ public class HydroSoft {
         }
          
          CApriChiudiSerra.apriSerra();
+         */
  /*
         try {
             Thread.sleep(5000);
@@ -38,20 +40,24 @@ public class HydroSoft {
         }
    
          CApriChiudiSerra.chiudiSerra();*/
-        /*
-        int tempAria = 0, umidAria = 0;
-        boolean bagnato = false, aperto = false;
-        String server = "", user = "", password = "";
-        //Creazione file JSON
-        CreateJSONFile json = new CreateJSONFile(tempAria, umidAria, aperto, bagnato);
-        json.createJSON();
-        json.createFile();
+
+        CJSONFile json = new CJSONFile();
+        CListaDati listaDati = new CListaDati();
+        //CListaDati rilevazioni = new CListaDati();
+//        rilevazioni.addDati(new CDati("pianta1", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta2", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta3", 21, 50, false, true));
+//        rilevazioni.addDati(new CDati("pianta4", 21, 50, false, true));
+        json.readFile(listaDati);
+        //json.createJSONObject(new CDati("pianta1", 21, 50, false, true)); //da togliere il new CDati per test
+        //json.createJSONArray(rilevazioni); //-> Aspetta ad usare devo risolvere cose :D (paci)
+        //json.createFile(); //-> Da un errore devo risolvere
         //Caricamento file su server
-        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
-        String file = json.getNomeFile();
-        connessione.caricaFile(file);
-        */
+//        String server = "", user = "", password = "";
+//        ConnessioneFTP connessione = new ConnessioneFTP(server, user, password);
+//        String file = json.getNomeFile();
+//        connessione.caricaFile(file);
 
     }
-    
+
 }

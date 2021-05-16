@@ -5,46 +5,103 @@ package hydrosoft;
  * @author pacie
  */
 public class CDati {
-    private int temperaturaAria;
-    private int umiditaAria;
+
+    private String oraRilevazione;
+    private String tipoPianta;
+    private float temperaturaAria;
+    private float umiditaAria;
     private boolean aperto; //true = aperto, false = chiuso
     private boolean bagnato; // true = bagnato, false = asciutto;
-    private String oraRilevazione;
 
-    public CDati(int temperaturaAria, int umiditaAria, boolean aperto, boolean bagnato, String oraRilevazione) {
+    public CDati() {
+        this.oraRilevazione = "";
+        this.tipoPianta = "";
+        this.temperaturaAria = 0.0f;
+        this.umiditaAria = 0.0f;
+        this.aperto = false;
+        this.bagnato = false;
+    }
+    
+    public CDati(String tipoPianta, int temperaturaAria, int umiditaAria, boolean aperto, boolean bagnato) {
+        this.oraRilevazione = CFormatOra.getOra();
+        this.tipoPianta = tipoPianta;
         this.temperaturaAria = temperaturaAria;
         this.umiditaAria = umiditaAria;
         this.aperto = aperto;
         this.bagnato = bagnato;
+    }
+
+    public void setOraRilevazione(String oraRilevazione) {
         this.oraRilevazione = oraRilevazione;
     }
 
-    public String getTemperaturaAria() {
+    public void setTipoPianta(String tipoPianta) {
+        this.tipoPianta = tipoPianta;
+    }
+
+    public void setTemperaturaAria(float temperaturaAria) {
+        this.temperaturaAria = temperaturaAria;
+    }
+
+    public void setUmiditaAria(float umiditaAria) {
+        this.umiditaAria = umiditaAria;
+    }
+
+    public void setAperto(boolean aperto) {
+        this.aperto = aperto;
+    }
+
+    public void setBagnato(boolean bagnato) {
+        this.bagnato = bagnato;
+    }
+
+    public String getOraRilevazione() {
+        return this.oraRilevazione;
+    }
+
+    public String getTipoPianta() {
+        return this.tipoPianta;
+    }
+
+    public float getTemperaturaAria() {
+        return this.temperaturaAria;
+    }
+
+    public String getTemperaturaAriaAsString() {
         String temp = String.valueOf(temperaturaAria);
         return temp;
     }
 
-    public String getUmiditaAria() {
+    public float getUmiditaAria() {
+        return this.umiditaAria;
+    }
+
+    public String getUmiditaAriaAsString() {
         String temp = String.valueOf(umiditaAria);
         return temp;
     }
-
-    public String isAperto() {
+    
+    public boolean isAperto(){
+        return this.aperto;
+    }
+    
+    public String isApertoAsString() {
         String temp = String.valueOf(aperto);
         return temp;
     }
-
-    public String isBagnato() {
+    
+    public boolean isBagnato(){
+        return this.bagnato;
+    }
+    
+    public String isBagnatoAsString() {
         String temp = String.valueOf(bagnato);
         return temp;
     }
 
-    public String getOraRilevazione() {
-        return oraRilevazione;
-    }   
     @Override
-    public String toString(){
-        String temp = temperaturaAria + " " + umiditaAria + " " + aperto + " " + bagnato + " " + oraRilevazione;
+    public String toString() {
+        String temp = oraRilevazione + " " + tipoPianta + " " +temperaturaAria + " " + umiditaAria + " " +  bagnato + " " + aperto;
         return temp;
     }
 }
