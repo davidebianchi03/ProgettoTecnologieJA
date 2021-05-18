@@ -4,4 +4,11 @@ Hydrosoft produce serre smart che permettono la cura automatica delle vostre pia
 ## Visualizzazione dei dati
 Puoi visualizzare i tuoi dati in tempo reale su [questo sito](http://www.hydrosoft.altervista.org/)
 ## Installazione programma su rasperry pi
-.....
+### Installazione di Wiring Pi
+```
+sudo apt-get install wiringpi
+```
+### Installazione della libreria RP4J su rasperry pi
+```
+sudo apt-get install pi4j
+```
