@@ -1,21 +1,14 @@
 package com.example.hydrosoftandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.apache.commons.net.ftp.FTP;
-import org.apache.commons.net.ftp.FTPClient;
-
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.OutputStream;
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ActivityVisDati extends AppCompatActivity {
@@ -26,12 +19,19 @@ public class ActivityVisDati extends AppCompatActivity {
     final String pass = "6QUqBkdbqRWB";
     final String url = "hydrosoft.altervista.org";
 
+    ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vis_dati);
-        TextView textView = findViewById(R.id.textView2);
-        textView.setText("Hello world");
+        Button btnScarica = (Button) findViewById(R.id.btnScarica);
+        btnScarica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ftp.downloadFile();
+            }
+        });
     }
 
 }
