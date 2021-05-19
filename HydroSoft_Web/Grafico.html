@@ -1,47 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HydroSoft</title>
-        <script src="Operazioni.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style type="text/css">
-            .Paragrafi{
-            font-size: 20px;
-            font-family:Verdana,Tahoma, sans-serif;
-            font-style: italic;
-            color:black;
-            text-align: center;
-            }
-            .Scelta{
-            font-size: 20px;
-            font-family:Verdana,Tahoma, sans-serif;
-            font-style: italic;
-            color:black;
-            text-align:right ;
-            }
-            body {           
-            background: url('Sfondo.jpg');
-            background-repeat: no-repeat;
-            background-position: 0 0;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            background-size: cover;
 
-            }
-            </style>
-    </head>
-    <body>
-        <form>
-            <div class="Scelta">
-                <select  name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">          
-                   
-                    <option value="Grafico.html">Grafico e andamenti</option>
-                    <option value="index.html">Serra e dati correlati</option>http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
-                </select>
+<head>
+    <title>HydroSoft</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="disegnaGrafici.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stile.css">
+</head>
+
+<body>
+    <form>
+        <div class="Scelta">
+            <select name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
+
+                <option value="Grafico.html">Grafico e andamenti</option>
+                <option value="index.html">Serra e dati correlati</option>
+                http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
+            </select>
         </div>
-         
-        </form>
-          
-    </body>
+        <h1 class="Paragrafi">Grafico temperatura</h1>
+        <canvas id="graficoTemperatura" class="grafico"></canvas>
+        <h1 class="Paragrafi">Grafico umidit&aacute;</h1>
+        <canvas id="graficoUmidita" class="grafico"></canvas>
+    </form>
+
+</body>
 
 </html>
