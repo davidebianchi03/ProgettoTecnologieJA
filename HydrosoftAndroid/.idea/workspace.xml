@@ -34,6 +34,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../AppHydrosoft" />
   </component>
+  <component name="RecentsManager">
+    <key name="android.template.-837078941">
+      <recent name="com.example.hydrosoftandroid" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -121,5 +126,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.304.1360.728@0.0.1920.1040" timestamp="1621401401266" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621402101506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.304.1360.728@0.0.1920.1040" timestamp="1621402101506" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621402101506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.304.1360.728@0.0.1920.1040" timestamp="1621402101506" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621402101505">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.304.1360.728@0.0.1920.1040" timestamp="1621402101505" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621402101506">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.304.1360.728@0.0.1920.1040" timestamp="1621402101506" />
   </component>
 </project>
