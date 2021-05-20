@@ -16,8 +16,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 
-public class ConnessioneFTP extends Thread {
-    private  String text;
+public class ConnessioneFTP{
     private FTPClient ftp;
 
     public ConnessioneFTP(String host, String user, String pwd){
