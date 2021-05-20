@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <title>HydroSoft</title>
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="Aggiornamento_dati.js"></script>
@@ -13,28 +14,23 @@
 <body>
     <form>
         <div class="Scelta">
-            <select name="URL"
-                onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
+            <select name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
                 <option value="index.html">Serra e dati correlati</option>
                 //http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
                 <option value="Grafico.html">Grafico e andamenti</option>
             </select>
         </div>
-        <div class="Paragrafi">
-        <h1>
-            Hydrosoft
-        </h1>
-
-
+        <div class="titolo">
+            <img src="Immagini/logo.png" class="titolo">
         </div>
-        <p class="Paragrafi">Tipo Pianta:<label id="tipoPianta">Tipo pianta</label></p>
-        <p class="Paragrafi">Temperatura:<label id="temperatura">0</label></p>
+        <p class="Paragrafi">Tipo Pianta: <label id="tipoPianta">Tipo pianta</label></p>
+        <p class="Paragrafi">Temperatura: <label id="temperatura">0</label>°C</p>
 
-        <p class="Paragrafi">Umidit&aacute;:<label id="umidita">0</label></p>
+        <p class="Paragrafi">Umidit&aacute;: <label id="umidita">0</label>%</p>
 
-        <p class="Paragrafi">Stato Terreno:<img id="stato_terreno"></p>
+        <p class="Paragrafi">Stato Terreno: <img id="stato_terreno"></p>
 
-        <p class="Paragrafi">Stato Serra:<img id="stato_serra"></p>
+        <p class="Paragrafi">Stato Serra: <img id="stato_serra"></p>
 
         <footer>
             <center>
