@@ -13,13 +13,10 @@
 
 <body>
     <form>
-        <div class="Scelta">
-            <select name="URL" onchange="window.location.href= this.form.URL.options[this.form.URL.selectedIndex].value">
-                <option value="index.html">Serra e dati correlati</option>
-                //http://hydrosoft.altervista.org/index.html,http://hydrosoft.altervista.org/Grafico.html
-                <option value="Grafico.html">Grafico e andamenti</option>
-            </select>
-        </div>
+        <div id="menu">
+            <a id="this-page" href="index.html">DATI LIVE</a>
+            <a class="other-pages" href="Grafico.html">GRAFICI</a>
+        </div><br><br>
         <div class="titolo">
             <img src="Immagini/logo.png" class="titolo">
         </div>
