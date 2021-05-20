@@ -3,48 +3,60 @@ package com.example.hydrosoftandroid;
 
 import android.util.Log;
 
+import org.apache.commons.net.PrintCommandListener;
+import org.apache.commons.net.ftp.FTP;
 import org.apache.commons.net.ftp.FTPClient;
+import org.apache.commons.net.ftp.FTPReply;
 
+import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
-public class ConnessioneFTP {
-    private final FTPClient client;
-    private final String server;
-    private final int port;
-    private final String user;
-    private final String password;
+public class ConnessioneFTP extends Thread {
+    private  String text;
+    private FTPClient ftp;
 
-    public ConnessioneFTP(String server, int port, String user, String password){
-        this.client = new FTPClient();
-        this.server = server;
-        this.port = port;
-        this.user = user;
-        this.password = password;
-    }
-    public ConnessioneFTP(String server, String user, String password){
-        this.client = new FTPClient();
-        this.server = server;
-        this.port = 21; //Default di AlterVista
-        this.user = user;
-        this.password = password;
-    }
-    public void downloadFile(){
-
-        try {
-            client.connect(server, port);
-
-            client.login(user, password);
-
-            String nomeFile = "rilevazioniSerraSingola.json";
-            InputStream iS = client.retrieveFileStream(nomeFile);
-            String file = iS.toString();
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
+    public ConnessioneFTP(String host, String user, String pwd){
+            ftp = new FTPClient();
+            ftp.addProtocolCommandListener(new PrintCommandListener(new PrintWriter(System.out)));
+            int reply;
+            try {
+                ftp.connect(host);
+                reply = ftp.getReplyCode();
+                if (!FTPReply.isPositiveCompletion(reply)) {
+                    ftp.disconnect();
+                }
+                ftp.login(user, pwd);
+                ftp.setFileType(FTP.BINARY_FILE_TYPE);
+                ftp.enterLocalPassiveMode();
+            }
+            catch (Exception exception){}
         }
-    }
 
+        public String downloadFile(String percorsoRemoto) {
+            try (ByteArrayOutputStream fos = new ByteArrayOutputStream ()) {
+                this.ftp.retrieveFile(percorsoRemoto, fos);
+                String contenuto = fos.toString("UTF-8");
+                return contenuto;
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }
 
+        public void disconnect() {
+            try {
+                if (this.ftp.isConnected()) {
+                    this.ftp.logout();
+                    this.ftp.disconnect();
+                }
+            }
+            catch(Exception exception){
+
+            }
+        }
 }

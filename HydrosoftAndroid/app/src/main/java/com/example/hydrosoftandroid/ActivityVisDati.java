@@ -19,17 +19,36 @@ public class ActivityVisDati extends AppCompatActivity {
     final String pass = "6QUqBkdbqRWB";
     final String url = "hydrosoft.altervista.org";
 
-    ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vis_dati);
         Button btnScarica = (Button) findViewById(R.id.btnScarica);
+        TextView text = findViewById(R.id.textView2);
+
+        new Thread(new Runnable() {
+            public void run() {
+                String testoJSON;
+                ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
+                testoJSON= ftp.downloadFile("rilevazioniSerraSingola.json");
+                ftp.disconnect();
+                text.setText(testoJSON);
+            }
+        }).start();
+
         btnScarica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ftp.downloadFile();
+                 new Thread(new Runnable() {
+                    public void run() {
+                        String testoJSON;
+                        ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
+                        testoJSON= ftp.downloadFile("rilevazioniSerraSingola.json");
+                        ftp.disconnect();
+                        text.setText(testoJSON);
+                    }
+                }).start();
             }
         });
     }
