@@ -36,6 +36,7 @@ dependencies {
     implementation files('..\\libs\\commons-net-3.8.0.jar')
     implementation files('..\\libs\\commons-net-3.8.0.jar')
     implementation files('..\\libs\\json-simple-1.1.1.jar')
+    implementation files('..\\libs\\json-simple-1.1.1.jar')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

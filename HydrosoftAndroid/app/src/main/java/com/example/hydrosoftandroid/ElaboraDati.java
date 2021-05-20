@@ -2,7 +2,7 @@ package com.example.hydrosoftandroid;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.json.simple.parser.JSONParser;
+
 
 public class ElaboraDati {
     private String datiJSON;
