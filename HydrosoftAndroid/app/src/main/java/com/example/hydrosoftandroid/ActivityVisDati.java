@@ -20,22 +20,27 @@ public class ActivityVisDati extends AppCompatActivity {
     final String pass = "6QUqBkdbqRWB";
     final String url = "hydrosoft.altervista.org";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vis_dati);
         Button btnScarica = (Button) findViewById(R.id.btnScarica);
-        TextView text = findViewById(R.id.textView2);
+        TextView textOra = findViewById(R.id.txtOra);/*
+        TextView textTipo = findViewById(R.id.txtTipo);
+        TextView textTemp = findViewById(R.id.txtOra);
+        TextView textUmid = findViewById(R.id.txtOra);
+        TextView textAperto = findViewById(R.id.txtOra);
+        TextView textBagnato = findViewById(R.id.txtOra);*/
 
         new Thread(new Runnable() {
             public void run() {
-                String testoJSON;
+
                 ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
-                testoJSON= ftp.downloadFile("rilevazioniSerraSingola.json");
+                String testoJSON = ftp.downloadFile("rilevazioniSerraSingola.json");
                 elabora = new ElaboraDati(testoJSON);
                 ftp.disconnect();
-                text.setText(elabora.getOra());
+
+                //textTipo.setText(elabora.getTipo());
             }
         }).start();
 
@@ -48,11 +53,10 @@ public class ActivityVisDati extends AppCompatActivity {
                         ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
                         testoJSON= ftp.downloadFile("rilevazioniSerraSingola.json");
                         ftp.disconnect();
-                        text.setText(testoJSON);
+                        textOra.setText(elabora.getOra());
                     }
                 }).start();
             }
         });
     }
-
 }

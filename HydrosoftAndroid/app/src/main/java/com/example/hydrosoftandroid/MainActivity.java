@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Benvenuto", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, ActivityVisDati.class);
-                Log.i("ciao","ciao");
                 startActivity(intent);
             }
         });
