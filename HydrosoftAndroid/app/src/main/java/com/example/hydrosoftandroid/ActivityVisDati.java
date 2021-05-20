@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ActivityVisDati extends AppCompatActivity {
 
     private static final String LOG_TAG = "ActivityVisDati";
+    private ElaboraDati elabora;
     //credenziali
     final String user = "hydrosoft";
     final String pass = "6QUqBkdbqRWB";
@@ -32,8 +33,9 @@ public class ActivityVisDati extends AppCompatActivity {
                 String testoJSON;
                 ConnessioneFTP ftp = new ConnessioneFTP(url, user, pass);
                 testoJSON= ftp.downloadFile("rilevazioniSerraSingola.json");
+                elabora = new ElaboraDati(testoJSON);
                 ftp.disconnect();
-                text.setText(testoJSON);
+                text.setText(elabora.getOra());
             }
         }).start();
 
