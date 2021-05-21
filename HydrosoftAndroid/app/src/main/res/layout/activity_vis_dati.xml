@@ -11,51 +11,56 @@
         android:id="@+id/txtOra"
         android:layout_width="231dp"
         android:layout_height="28dp"
+        android:gravity="center"
+        android:text="Ora"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.103" />
+        app:layout_constraintVertical_bias="0.105" />
 
     <TextView
         android:id="@+id/txtView6"
         android:layout_width="154dp"
         android:layout_height="33dp"
+        android:gravity="center"
         android:text="Stato serra:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/txtAperta"
-        android:layout_width="135dp"
-        android:layout_height="27dp"
+        android:layout_width="249dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="stato serra"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.662" />
 
     <TextView
         android:id="@+id/txtView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Stato irrigazione"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.487" />
@@ -67,6 +72,7 @@
         android:text="Ora rilevazione:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -78,6 +84,7 @@
         android:id="@+id/txtView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Umidità Aria:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
@@ -90,40 +97,45 @@
 
     <TextView
         android:id="@+id/txtBagnato"
-        android:layout_width="193dp"
-        android:layout_height="30dp"
+        android:layout_width="192dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:text="stato irrigazione"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.543" />
 
     <TextView
         android:id="@+id/txtUmidita"
-        android:layout_width="84dp"
-        android:layout_height="26dp"
+        android:layout_width="232dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="Umidità"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintVertical_bias="0.437" />
 
     <TextView
         android:id="@+id/txtView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Temperatura Aria:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.279" />
@@ -135,6 +147,7 @@
         android:text="Tipo pianta:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
@@ -144,35 +157,40 @@
 
     <TextView
         android:id="@+id/txtTipo"
-        android:layout_width="166dp"
-        android:layout_height="28dp"
+        android:layout_width="352dp"
+        android:layout_height="33dp"
+        android:gravity="center"
+        android:text="Tipo pianta"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219" />
+        app:layout_constraintVertical_bias="0.217" />
 
     <TextView
         android:id="@+id/txtTemperatura"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
+        android:layout_width="272dp"
+        android:layout_height="29dp"
+        android:gravity="center"
+        android:text="temperatura"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
+        app:layout_constraintVertical_bias="0.334" />
 
     <Button
         android:id="@+id/btnScarica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aggiorna"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
