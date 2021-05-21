@@ -1,4 +1,3 @@
 Le risorse più importanti sono:
 -i materiali per la costruzione della serra
--il sensore per l' umidità
--la cisterna per l' acqua.
+-Sensori e componenti elettroniche
