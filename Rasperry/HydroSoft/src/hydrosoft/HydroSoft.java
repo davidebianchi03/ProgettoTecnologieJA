@@ -40,18 +40,65 @@ public class HydroSoft {
 
         CApriChiudiSerra.chiudiSerra();
 
-        String urlServer = "";
-        String user = "";
-        String pass = "";
+        String urlServer = "hydrosoft.altervista.org";
+        String user = "hydrosoft";
+        String pass = "6QUqBkdbqRWB";
 
+        //set up della serra
         boolean pompaAttiva = false;
-
+        boolean piantaCambiata = false;
         long oraAccensione = 0;
         pompa.setState(PinState.LOW);//inizializzo la pompa a spenta
+
+        //prima lettura della temperatura e umidita e upload
+        for (int i = 0; i < 10; i++) {
+            Float t = dht11.getTemperatura(7);
+            if (t != null) {
+                temperatura = t.floatValue();
+                break;
+            }
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(HydroSoft.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        for (int i = 0; i < 10; i++) {
+            Float u = dht11.getUmidita(7);
+            if (u != null) {
+                umidita = u.floatValue();
+                break;
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(HydroSoft.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        CDati dati = new CDati(tipoPianta.getPianta(), (int) temperatura, (int) umidita, aperta, umido);
+        fileJSON.readFile();
+        fileJSON.createJSONObject(dati);
+        fileJSON.appendJSONOject(dati);
+        fileJSON.createFile();
+        ConnessioneFTP ftp = new ConnessioneFTP(urlServer, user, pass);
+        String file = fileJSON.getNomeFileSR();//upload singola rilevazione
+        ftp.caricaFile(file);
+        file = fileJSON.getNomeFileLR();//upload più rilevazioni
+        ftp.caricaFile(file);
+        //System.out.println("FileUploaded");
+        lastUpload = System.currentTimeMillis();
+        piantaCambiata = false;
+
+        //fine setup
+        
         while (true) {
             if (pulsante.isHigh()) {//se preme e rilascia il pulsante per cambiare il tipo di pianta
                 while (pulsante.isHigh());
                 tipoPianta.cambiaPianta();
+                piantaCambiata = true;
             }
 
             //rilevazione della temperatura dell'aria
@@ -118,21 +165,22 @@ public class HydroSoft {
                 aperta = false;
                 CApriChiudiSerra.chiudiSerra();
             }
-            //System.out.println("oke");
+            
             //aggiornamento file json su altervista tramite ftp ogni 2 minuti
-            if (System.currentTimeMillis() - lastUpload > 120000) {
-                CDati dati = new CDati(tipoPianta.getPianta(), (int) temperatura, (int) umidita, aperta, umido);
+            if (System.currentTimeMillis() - lastUpload > 120000 || piantaCambiata) {
+                dati = new CDati(tipoPianta.getPianta(), (int) temperatura, (int) umidita, aperta, umido);
                 fileJSON.readFile();
                 fileJSON.createJSONObject(dati);
                 fileJSON.appendJSONOject(dati);
                 fileJSON.createFile();
-                ConnessioneFTP ftp = new ConnessioneFTP(urlServer, user, pass);
-                String file = fileJSON.getNomeFileSR();//upload singola rilevazione
+                ftp = new ConnessioneFTP(urlServer, user, pass);
+                file = fileJSON.getNomeFileSR();//upload singola rilevazione
                 ftp.caricaFile(file);
                 file = fileJSON.getNomeFileLR();//upload più rilevazioni
                 ftp.caricaFile(file);
                 //System.out.println("FileUploaded");
                 lastUpload = System.currentTimeMillis();
+                piantaCambiata = false;
             }
 
         }
