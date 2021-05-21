@@ -2,7 +2,7 @@
 # Hydrosoft
 Hydrosoft produce serre smart che permettono la cura automatica delle vostre piante da appartamento.  
 ## Visualizzazione dei dati
-Puoi visualizzare i tuoi dati in tempo reale su [questo sito](http://www.hydrosoft.altervista.org/)
+Puoi visualizzare i tuoi dati in tempo reale su [questo sito](http://www.hydrosoft.altervista.org/) oppure tramite la nostra applicazione per android
 ## Installazione programma su rasperry pi
 ### Installazione di Wiring Pi
 ```
