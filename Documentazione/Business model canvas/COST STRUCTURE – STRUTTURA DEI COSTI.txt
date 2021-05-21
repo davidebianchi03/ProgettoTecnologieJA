@@ -1,0 +1,11 @@
+COST STRUCTURE – STRUTTURA DEI COSTI
+I principali costi della nostra azienda sarebbero:
+- Acquisto delle materie prime (componenti elettroniche e plexiglass in particolare)
+- Costo licenza caricamento applicazione su Google Play Store (25 euro) o su App Store (99 dollari l'anno)
+- Costi derivanti dal mantenimento/miglioramento del server a cui tutte le serre e tutti gli utenti si collegano
+- Risorse umane
+- Magazzino
+- Spedizione e trasporto
+- Assistenza clienti
+- Attrezzatura
+- Campagna pubblicitaria
