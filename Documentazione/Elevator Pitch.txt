@@ -33,5 +33,4 @@
 	e abbiamo creato l'applicazione per android. In futuro vorremmo creare un'applicazione simile anche per iOS.
 	Inoltre vorremmo creare anche degli account attraverso i quali gli utenti possano registrare una serra e visualizzare
 	i propri dati, in maniera sicura sulla nostra pagina web.
-- Domanda
 	
