@@ -5,4 +5,4 @@ Elenco idee proposte per progetto JA Tecnologie
 - Stazione meteo
 - Termostato
 - Magazzino automatico
-- Drone automatico
+- Drone automatico pacchi (Pubblicità pacchi amazon -> https://www.youtube.com/watch?v=MXo_d6tNWuY&t=3s&ab_channel=amazon)
