@@ -1,0 +1,37 @@
+- Problema
+	Il problema che ci siamo posti di risolvere è il fatto che le persone quando 
+	partono per un viaggio/una vacanza e stanno lontano da casa per diversi giorni,
+	devono sempre lasciare ad un vicino o ad un parente le piante da appartamento
+	che si hanno in casa. Questo è ancora più difficile da fare per tutte quelle
+	persone che non vivono nelle vicinanze di un proprio parente stretto.
+- Soluzione
+	La soluzione che abbiamo trovato è quella di creare una serra che provveda a 
+	irrigare le piante. Inoltre la serra se fa troppo caldo si apre automaticamente.
+	La nostra serra registra le seguenti informazioni temperatura dell'aria, 
+	umidità dell'aria, se il terreno è bagnato oppure o no e se la serra è aperta o chiusa.
+	Queste informazioni vengono caricate su un server e sono accessibili dall'utente tramite
+	un sito web oppure un'applicazione installata sul proprio smartphone.
+- Team
+	Il team è composto da:
+		- Bianchi Davide
+		- De Maria Mattia
+		- Paci Emanuele
+		- Russo Edoardo
+		- Safine Younes ???
+	I membri del team hanno diversi ruoli:
+		- Bianchi Davide -> Capogruppo/Sviluppatore
+		- De Maria Mattia -> Mediatore/Sviluppatore
+		- Paci Emanuele -> Vice/Sviluppatore
+		- Russo Edoardo -> Motivatore/Sviluppatore
+		- Safine Younes -> Leader???
+- Roadmap
+	Il nostro progetto è iniziato con la realizzazione di un primo prototipo della serra.
+	Per prima cosa siamo partiti con la realizzazione di un semplice prototipo che legge e 
+	visualizza i dati sulla console. In seguito abbiamo iniziato la realizzazione di un prototipo
+	di serra perfettamente funzionante compresa di caricamento sul server e visualizzazione dei dati su un 
+	sito web. Quindi abbiamo sistemato la grafica del sito in modo da renderlo accattivante per un cliente
+	e abbiamo creato l'applicazione per android. In futuro vorremmo creare un'applicazione simile anche per iOS.
+	Inoltre vorremmo creare anche degli account attraverso i quali gli utenti possano registrare una serra e visualizzare
+	i propri dati, in maniera sicura sulla nostra pagina web.
+- Domanda
+	
