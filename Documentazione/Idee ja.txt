@@ -1,0 +1,8 @@
+Elenco idee proposte per progetto JA Tecnologie
+- Portachiavi
+- Serra domotica <-------- Progetto scelto
+- Smart tag
+- Stazione meteo
+- Termostato
+- Magazzino automatico
+- Drone automatico
